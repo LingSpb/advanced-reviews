@@ -7,6 +7,7 @@ using EPiServer.Core;
 using EPiServer.Framework.Serialization;
 using EPiServer.Notification;
 using EPiServer.ServiceLocation;
+using EPiServer.Shell;
 using EPiServer.Web.Routing;
 
 namespace Advanced.CMS.ApprovalReviews.Notifications
@@ -79,7 +80,7 @@ namespace Advanced.CMS.ApprovalReviews.Notifications
         internal Uri GetEditUri(ContentReference contentLink, string contextKey = "epi.cms.contentdata")
         {
             var editUrlBuilder = new UrlBuilder(_editUrlResolver.GetEditViewUrl(contentLink, new EditUrlArguments()));
-            editUrlBuilder.Fragment = $"context={contextKey}:///{contentLink}";
+            editUrlBuilder.Fragment = $"context={contextKey}:///{contentLink}&activeview={CmsViewNames.OnPageEditView}";
             return editUrlBuilder.Uri;
         }
     }

@@ -16,7 +16,8 @@
     <PackageReference Include="EPiServer.CMS.UI" />
     <PackageReference Include="EPiServer.CMS.UI.AspNetIdentity" />
     <PackageReference Include="EPiServer.CMS.UI.VisitorGroups" />
-    <PackageReference Include="EPiServer.Hosting" />
+    <PackageReference Include="EPiServer.Hosting" Version="12.13.0"/>
+    <PackageReference Include="EPiServer.CMS.AspNetCore.Routing" Version="12.13.0"/>
 
     <PackageReference Include="EPiServer.CMS" />
     <PackageReference Include="EPiServer.Commerce" />
